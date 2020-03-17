@@ -1,5 +1,5 @@
 <template>
-  <div>index2</div>
+  <div>index4</div>
 </template>
 <script>
 export default {
@@ -9,5 +9,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-
+div
+  height 100%
+  background-color #fff
 </style>

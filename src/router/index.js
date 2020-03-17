@@ -6,34 +6,34 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Home',
+      path: '/home',
+      name: '',
       component: () => import('@/components/home.vue'),
       children: [
         {
-          path: 'index1',
+          path: '',
           name: 'Index1',
-          component: () => import('@/components/view/index1.vue')
+          component: () => import('@/components/views/index1.vue')
         },
         {
           path: 'index2',
           name: 'Index2',
-          component: () => import('@/components/view/index2.vue')
+          component: () => import('@/components/views/index2.vue')
         },
         {
           path: 'index3',
           name: 'Index3',
-          component: () => import('@/components/view/index3.vue')
+          component: () => import('@/components/views/index3.vue')
         },
         {
           path: 'index4',
           name: 'Index4',
-          component: () => import('@/components/view/index4.vue')
+          component: () => import('@/components/views/index4.vue')
         }
       ]
     },
     {
-      path: '/index',
+      path: '/login',
       name: 'Index',
       component: () => import('@/components/login/index.vue')
     }

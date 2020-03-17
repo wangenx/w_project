@@ -7,21 +7,21 @@
           :default-active="activeIndex"
           class="el-menu-demo"
           mode="vertical"
-          @select="handleSelect"
-          background-color="#545c64"
           text-color="#fff"
-          active-text-color="#ffd04b">
-          <el-menu-item index="index1">
-            <router-link to="/index1">处理中心</router-link>
+          active-text-color="#ffffff">
+          <el-menu-item index="/index1">
+            <i></i>
+            <router-link to="/home">处理中心</router-link>
           </el-menu-item>
-          <el-menu-item index="index2">
-            <router-link to="/index2">开始中心</router-link>
+          <el-menu-item index="/index2">
+            <i class="el-icon-setting"></i>
+            <router-link to="/home/index2">开始中心</router-link>
           </el-menu-item>
-          <el-menu-item index="index3">
-            <router-link to="/index3">消息中心</router-link>
+          <el-menu-item index="/index3">
+            <router-link to="/home/index3">消息中心</router-link>
           </el-menu-item>
-          <el-menu-item index="index4">
-            <router-link to="/index4">订单管理</router-link>
+          <el-menu-item index="/index4">
+            <router-link to="/home/index4">订单管理</router-link>
           </el-menu-item>
         </el-menu>
       </div>
@@ -35,51 +35,50 @@
 export default {
   data () {
     return {
-      activeIndex: 'index1'
+      activeIndex: '/index1'
     }
   },
   created () {
-    if (window.localStorage.getItem('path')) {
-      this.activeIndex = window.localStorage.getItem('path')
+    console.log(this.$route)
+    this.$route.fullPath === '/home' ? this.activeIndex = '/index1' : this.activeIndex = this.$route.fullPath.slice(5)
+  },
+  watch: {
+    $route (to, from) {
+      to.path === '/home' ? this.activeIndex = '/index1' : this.activeIndex = to.path.slice(5)
     }
   },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key)
-      console.log(keyPath)
-      window.localStorage.setItem('path', key)
-    }
-  },
-  destroyed () {
-    window.localStorage.setItem('path', '')
   }
 }
 </script>
 <style lang="stylus" scoped>
 .home
   header
-    line-height 100px
-    font-size 26px
-    color #333333
-    background-color #f5f5f5
+    line-height 48px
+    font-size 16px
+    color #1F293D
+    background-color #ffffff
 
 .home_main
-  margin-top 20px
   > div
     float left
   .nav_menu
-    width 200px
+    width 208px
+    height calc(100vh - 48px)
+    background-color #11293E
     > .el-menu-demo
-      li
+      .el-menu-item
         padding-left 0 !important
         a
-          display block
+          display inline-block
           width 100%
           line-height 50px
           text-align center
+      .is-active
+        background-color #243A4D
   .content
-    width 1000px
-    height 500px
-    margin-left 20px
-    background-color #f5f5f5
+    width calc(100vw - 256px)
+    height calc(100vh - 72px)
+    margin-top 24px
+    padding 0 24px
 </style>

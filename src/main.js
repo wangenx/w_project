@@ -4,19 +4,21 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import './styles/index.stylus'
-
 import {
   Menu,
   Submenu,
   MenuItem,
-  MenuItemGroup
+  MenuItemGroup,
+  Icon
 } from 'element-ui'
+
+import '@/styles/index.stylus'
 
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
+Vue.use(Icon)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
