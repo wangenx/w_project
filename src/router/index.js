@@ -12,29 +12,24 @@ export default new Router({
       children: [
         {
           path: '',
-          name: 'Index1',
-          component: () => import('@/components/views/index1.vue')
+          name: 'Infor',
+          component: () => import('@/components/views/infor.vue')
         },
         {
-          path: 'index2',
-          name: 'Index2',
-          component: () => import('@/components/views/index2.vue')
+          path: 'stream',
+          name: 'Stream',
+          component: () => import('@/components/views/stream.vue')
         },
         {
-          path: 'index3',
-          name: 'Index3',
-          component: () => import('@/components/views/index3.vue')
-        },
-        {
-          path: 'index4',
-          name: 'Index4',
-          component: () => import('@/components/views/index4.vue')
+          path: 'personnel',
+          name: 'Personnel',
+          component: () => import('@/components/views/personnel.vue')
         }
       ]
     },
     {
       path: '/login',
-      name: 'Index',
+      name: 'Login',
       component: () => import('@/components/login/index.vue')
     }
   ]
