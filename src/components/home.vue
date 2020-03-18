@@ -7,6 +7,12 @@
           <img src="" alt="">
         </div>
         <div class="user_info">
+          <div class="user_info_con">
+            <div class="head"></div>
+            <div class="name">韩大傻</div>
+            <div class="address">龙凤区/大庆市</div>
+          </div>
+          <div class="Logout">退出登录</div>
         </div>
       </div>
     </header>
@@ -88,10 +94,51 @@ export default {
       border-radius 50%
       margin-right 31px
       margin-top 13px
+      cursor pointer
+      position relative
       > .head
         width 100%
         height 100%
         border-radius 50%
+      > .user_info
+        position absolute
+        width 246px
+        height 286px
+        background-color #fff
+        right -21px
+        bottom -306px
+        box-shadow 0px 8px 14px 0px rgba(0,0,0,0.07)
+        > .user_info_con
+          height 184px
+          padding-top 16px
+          border-bottom 1px solid #ebeef5
+          > .head
+            width 100px
+            height 100px
+            background-color #f5f5f5
+            border-radius 50%
+            margin 0 auto
+          > .name
+            font-size 14px
+            color #000
+            text-align center
+            line-height 22px
+            margin-top 16px
+          > .address
+            font-size 14px
+            color #9e9d9d
+            line-height 22px
+            text-align center
+            margin-top 8px
+        > .Logout
+          width 123px
+          line-height 36px
+          text-align center
+          border-radius 4px
+          background-color #1989fa
+          font-size 14px
+          color #ffffff
+          margin 16px auto
 
 .home_main
   > div
