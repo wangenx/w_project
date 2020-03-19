@@ -9,7 +9,11 @@ import {
   Submenu,
   MenuItem,
   MenuItemGroup,
-  Icon
+  Icon,
+  Form,
+  FormItem,
+  Input,
+  Button
 } from 'element-ui'
 
 import '@/styles/index.stylus'
@@ -19,6 +23,10 @@ Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
 Vue.use(Icon)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+Vue.use(Button)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

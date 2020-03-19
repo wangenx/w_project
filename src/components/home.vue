@@ -102,11 +102,13 @@ export default {
         border-radius 50%
       > .user_info
         position absolute
+        display none
         width 246px
         height 286px
         background-color #fff
         right -21px
         bottom -306px
+        z-index 10
         box-shadow 0px 8px 14px 0px rgba(0,0,0,0.07)
         > .user_info_con
           height 184px
