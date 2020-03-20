@@ -29,6 +29,7 @@ export default {
     padding-left 24px
     background-color #ccc
     position relative
+    margin-bottom 24px
     .name
       font-size 24px
       line-height 32px
@@ -50,10 +51,9 @@ export default {
 .search
   height 244px
   background-color #fff
-  margin-top 24px
 
 .tabel
-  height 526px
+  height calc(100vh - 464px)
   background-color #fff
   margin-top 12px
 </style>
