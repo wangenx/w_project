@@ -1,9 +1,9 @@
 <template>
   <div class="infor">
-    <div v-show="visibe" class="banner" @click="closeBanner">
+    <div v-show="visibe" class="banner">
       <div class="name">上海市普陀区社会保障管理服务中心</div>
       <div class="msc">我们将会为您提供最优质的服务</div>
-      <span class="del"></span>
+      <span class="del" @click="closeBanner"></span>
     </div>
     <div :class="[isOpen?'':'search_scrren']" class="search">
       <div class="search_title clearfix">
@@ -82,19 +82,19 @@
               prop="id"
               label="身份证号"
               align="center"
-              min-width="182">
+              min-width="172">
             </el-table-column>
             <el-table-column
               prop="age"
               label="年龄"
               align="center"
-              min-width="36">
+              min-width="46">
             </el-table-column>
             <el-table-column
               prop="gender"
               label="性别"
               align="center"
-              min-width="36">
+              min-width="46">
             </el-table-column>
             <el-table-column
               prop="company"
@@ -459,6 +459,8 @@ export default {
   height 244px
   background-color #fff
   transition height .2s
+  border-radius 4px
+  overflow hideen
   .search_title
     height 64px
     > .left

@@ -101,7 +101,7 @@ $imgUrl = require('@/assets/images/')
       float left
       font-size 16px
       color #1F293D
-      line-height 40px
+      line-height 48px
       width 300px
       margin-left 24px
     > .header_user
