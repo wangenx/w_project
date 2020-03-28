@@ -1,6 +1,6 @@
 <template>
   <div class="infor">
-    <div class="banner">
+    <div v-show="visibe" class="banner" @click="closeBanner">
       <div class="name">上海市普陀区社会保障管理服务中心</div>
       <div class="msc">我们将会为您提供最优质的服务</div>
       <span class="del"></span>
@@ -211,6 +211,7 @@
 export default {
   data () {
     return {
+      visibe: true, // 关闭banner
       isOpen: true, // 搜索折叠
       currentPage: 1, // 页码
       ruleForm: { // 搜索
@@ -387,6 +388,10 @@ export default {
     },
     handleCurrentChange (val) {
       console.log(`当前页: ${val}`)
+    },
+    // 关闭banner
+    closeBanner () {
+      this.visibe = false
     }
   }
 }
