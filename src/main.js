@@ -9,11 +9,18 @@ import {
   Submenu,
   MenuItem,
   MenuItemGroup,
-  Icon,
   Form,
   FormItem,
   Input,
-  Button
+  Button,
+  Select,
+  Col,
+  Option,
+  DatePicker,
+  Table,
+  TableColumn,
+  Tooltip,
+  Pagination
 } from 'element-ui'
 
 import '@/styles/index.stylus'
@@ -22,11 +29,18 @@ Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
-Vue.use(Icon)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
 Vue.use(Button)
+Vue.use(Select)
+Vue.use(Col)
+Vue.use(Option)
+Vue.use(DatePicker)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Tooltip)
+Vue.use(Pagination)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

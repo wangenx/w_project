@@ -32,7 +32,7 @@ body
   -webkit-font-smoothing antialiased
   text-rendering optimizeLegibility
   -webkit-text-size-adjust none
-  font-family Inter, Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif
+  font-family PingFangSC-Regular, sans-serif, Inter, Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun
 
 a,
 a:focus,
