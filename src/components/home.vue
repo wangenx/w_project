@@ -161,6 +161,7 @@ $imgUrl = require('@/assets/images/')
           margin 16px auto
 
 .home_main
+  overflow-x scroll
   .nav_menu
     height calc(100vh - 48px)
     background-color #11293E
@@ -221,10 +222,15 @@ $imgUrl = require('@/assets/images/')
     margin-left 208px
     min-width 1184px
     width calc(100vw - 256px)
-    // height calc(100vh - 72px)
-    margin-top 72px
-    padding 0 24px 27px
+    height calc(100vh - 48px)
+    // margin-top 72px
+    position relative
+    right 0
+    top 48px
+    padding 24px 24px 0
     transition width .3s, margin-left .3s
+    overflow-y scroll
+    overflow-x scroll
   .content_collapse
     margin-left 64px
     width calc(100vw - 112px)

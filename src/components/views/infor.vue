@@ -427,7 +427,6 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .infor
-  height 100%
   // overflow auto
   .banner
     height 86px
